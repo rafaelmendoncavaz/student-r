@@ -37,11 +37,11 @@ function App() {
     <>
       <div>
         <header>
-          <div className="max-w-5xl px-3 mx-auto mt-[100px] flex justify-center gap-20">
+          <div className="max-w-5xl px-3 mx-auto mt-[100px] flex justify-center gap-20 mobile:flex-col mobile:items-center">
             <div>
               <img src="https://www.kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75" alt="Kenzie Academy Brasil" />
             </div>
-            <div>
+            <div className="mobile:text-center">
               <h1 className="font-bold text-lg">
                 Kenzie Academy Brasil - Curso de Programação Online
               </h1>
@@ -65,11 +65,11 @@ function App() {
             <h1 className="text-center text-2xl font-extrabold">
               Atestado de Matrícula
             </h1>
-            <p className="text-justify my-14">
+            <p className="text-justify my-14 mobile:px-2">
               A Escola de Programação Kenzie Academy Brasil, através deste, declara para os devidos fins de comprovação, direito e efeitos, que o(a) aluno(a) <span className="font-extrabold">RAFAEL MENDONÇA VAZ</span> encontra-se regularmente matriculado(a) no curso <span className="font-extrabold">Programação Fullstack</span>, atualmente no módulo <span className="font-extrabold">06 - Fundamentos de BackEnd com Node.js</span>, totalizando até o presente momento <span className="font-extrabold">899 horas</span>.
             </p>
           </div>
-          <div className="max-w-5xl mx-auto px-3 flex items-center justify-between">
+          <div className="max-w-5xl mx-auto px-3 flex items-center justify-between mobile:flex mobile:flex-col mobile:text-center mobile:space-y-5">
             <p>
               Daniel Kriger <br /> <span className="italic font-semibold">CEO, Co-fundador Kenzie Academy Brasil</span>
             </p>
@@ -77,9 +77,11 @@ function App() {
               São José dos Pinhais, {date.getDate().toLocaleString()} de {getMonth()} de {date.getFullYear()}
             </p>
           </div>
-          <div className="max-w-5xl mx-auto px-3 text-right my-10">
-            Código de autenticação: {crypto.randomUUID()}{Date.now()}
+          <div className="max-w-5xl mx-auto px-3 text-right my-10 space-y-2 mobile:text-left">
             <p>
+              Código de autenticação: {crypto.randomUUID()}{Date.now()}
+            </p>
+            <p className="mobile:text-center">
               Gerado às {date.toLocaleTimeString()} <br />
               Acesse https://www.kenzie.com.br/ para autenticar
             </p>
